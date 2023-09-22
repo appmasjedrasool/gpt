@@ -1,0 +1,19 @@
+Python
+import tkinter as tk
+from tkcalendar import Calendar
+
+def on_date_select():
+    selected_date = cal.get_date()
+    print(f"The selected date is: {selected_date}")
+
+root = tk.Tk()
+root.title(" تقویم مانند برنامه بادصبا")
+root.geometry("300x200")
+
+cal = Calendar(root, selectmode="day")
+cal.pack(pady=10)
+
+button = tk.Button(root, text="انتخاب تاریخ", command=on_date_select)
+button.pack(pady=5)
+
+root.mainloop()
